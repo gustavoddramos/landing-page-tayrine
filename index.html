@@ -9,10 +9,13 @@
   <link rel="canonical" href="https://tayrineduarte.com.br">
   <meta name="theme-color" content="#C4956A">
 
+  <link rel="icon" type="image/webp" href="imagens/logo.webp">
+  <link rel="apple-touch-icon" href="imagens/logo_tayrine.jpg">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Dra. Tayrine Duarte | Cuidados com Pele, Cabelos e Unhas">
   <meta property="og:description" content="Médica em Marabá/PA especializada em cuidados com pele, cabelos e unhas. Atendimento humanizado e personalizado.">
-  <meta property="og:image" content="https://tayrineduarte.com.br/imagens/perfil.webp">
+  <meta property="og:image" content="https://tayrineduarte.com.br/imagens/perfil.jpg">
   <meta property="og:url" content="https://tayrineduarte.com.br">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -21,7 +24,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dra. Tayrine Duarte | Cuidados com Pele, Cabelos e Unhas">
   <meta name="twitter:description" content="Médica em Marabá/PA especializada em cuidados com pele, cabelos e unhas. Agende sua consulta!">
-  <meta name="twitter:image" content="https://tayrineduarte.com.br/imagens/perfil.webp">
+  <meta name="twitter:image" content="https://tayrineduarte.com.br/imagens/perfil.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +52,13 @@
       "streetAddress": "Av. Nagib Mutran, 229",
       "addressLocality": "Marabá",
       "addressRegion": "PA",
-      "addressCountry": "BR"
+      "addressCountry": "BR",
+      "postalCode": "68501-087"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-5.3553",
+      "longitude": "-49.1321"
     },
     "image": "https://tayrineduarte.com.br/imagens/perfil.webp",
     "sameAs": ["https://www.instagram.com/tayrineduartee"]
@@ -74,7 +83,7 @@
       </a>
 
       <!-- Desktop nav -->
-      <nav class="hidden md:flex items-center gap-8 text-sm tracking-wide font-medium text-muted">
+      <nav class="hidden md:flex items-center gap-8 text-sm tracking-wide font-medium text-muted" aria-label="Navegação principal">
         <a href="#sobre" class="hover:text-rose-gold transition-colors duration-200">Sobre</a>
         <a href="#servicos" class="hover:text-rose-gold transition-colors duration-200">Serviços</a>
         <a href="#galeria" class="hover:text-rose-gold transition-colors duration-200">Galeria</a>
@@ -98,7 +107,7 @@
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden hidden bg-warm-white border-t border-blush">
-      <nav class="flex flex-col px-6 py-5 gap-4 text-base text-warm-gray font-medium">
+      <nav class="flex flex-col px-6 py-5 gap-4 text-base text-warm-gray font-medium" aria-label="Menu móvel">
         <a href="#sobre" class="mobile-link py-1 hover:text-rose-gold transition-colors">Sobre</a>
         <a href="#servicos" class="mobile-link py-1 hover:text-rose-gold transition-colors">Serviços</a>
         <a href="#galeria" class="mobile-link py-1 hover:text-rose-gold transition-colors">Galeria</a>
@@ -113,10 +122,12 @@
   </header>
 
 
+  <main>
+
   <!-- ════════════════════════════════════════════
        HERO
        ════════════════════════════════════════════ -->
-  <section class="pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden">
+  <section id="hero" class="pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden">
     <div class="mx-auto max-w-7xl px-5 sm:px-8 grid md:grid-cols-2 items-center gap-12 md:gap-16">
 
       <!-- Text -->
@@ -149,6 +160,7 @@
           <img src="imagens/perfil.jpg"
                alt="Dra. Tayrine Duarte, médica especializada em cuidados com pele, cabelos e unhas"
                class="w-72 sm:w-80 md:w-[22rem] lg:w-[26rem] rounded-3xl shadow-xl shadow-warm-gray/10 object-cover aspect-[3/4]"
+               fetchpriority="high"
                width="416" height="555">
         </picture>
       </div>
@@ -459,7 +471,7 @@
   <!-- ════════════════════════════════════════════
        CTA FINAL
        ════════════════════════════════════════════ -->
-  <section class="py-20 md:py-28 bg-gradient-to-b from-blush/40 to-warm-white">
+  <section id="contato" class="py-20 md:py-28 bg-gradient-to-b from-blush/40 to-warm-white">
     <div class="mx-auto max-w-2xl px-5 sm:px-8 text-center">
       <h2 class="font-heading text-3xl md:text-4xl font-semibold text-warm-gray leading-tight">
         Cuide da Saúde da Sua Pele, Cabelos e Unhas
@@ -479,6 +491,8 @@
     </div>
   </section>
 
+
+  </main>
 
   <!-- ════════════════════════════════════════════
        FOOTER
