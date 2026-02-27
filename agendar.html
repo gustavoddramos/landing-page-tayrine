@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Redirecionando para o Agendamento — Dra. Tayrine Duarte</title>
+  <link rel="icon" type="image/webp" href="imagens/logo.webp">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLHEYM15MX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SLHEYM15MX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rose-gold: #C4956A;
+      --blush: #F5E6E0;
+      --warm-white: #FEFAF8;
+      --warm-gray: #3D3530;
+      --muted: #8B7E74;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--warm-white);
+      color: var(--warm-gray);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .card {
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
+    }
+    .icon {
+      width: 64px;
+      height: 64px;
+      color: var(--rose-gold);
+      margin: 0 auto 1.5rem;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--warm-gray);
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .spinner {
+      width: 24px;
+      height: 24px;
+      border: 3px solid var(--blush);
+      border-top-color: var(--rose-gold);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 1.5rem;
+    }
+    .link {
+      color: var(--rose-gold);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .link:hover { color: var(--warm-gray); }
+    .back {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+    .back:hover { text-decoration: underline; }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- Calendar icon -->
+    <svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"/></svg>
+
+    <h1 class="title">Abrindo o Agendamento...</h1>
+    <p class="subtitle">Você será redirecionado para agendar sua consulta com a Dra. Tayrine Duarte.</p>
+
+    <div class="spinner"></div>
+
+    <a id="agendar-link"
+       href="https://agendeonline.tayrineduarte.com.br"
+       class="link">
+      Clique aqui se não for redirecionado
+    </a>
+
+    <br>
+    <a href="index.html" class="back">&larr; Voltar ao site</a>
+  </div>
+
+  <script>
+    (function() {
+      'use strict';
+
+      var AGENDAR_URL = 'https://agendeonline.tayrineduarte.com.br';
+
+      // Dispara o evento de conversão no GA4
+      if (typeof gtag === 'function') {
+        gtag('event', 'agendar_consulta_click', {
+          'event_category': 'conversao',
+          'event_label': 'agendamento_redirecionamento',
+          'event_callback': function() {
+            window.location.href = AGENDAR_URL;
+          }
+        });
+      }
+
+      // Fallback: redireciona após 1.5s caso o gtag não responda
+      setTimeout(function() {
+        window.location.href = AGENDAR_URL;
+      }, 1500);
+    })();
+  </script>
+
+</body>
+</html>
