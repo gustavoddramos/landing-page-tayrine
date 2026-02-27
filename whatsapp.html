@@ -7,14 +7,13 @@
   <title>Redirecionando para o WhatsApp — Dra. Tayrine Duarte</title>
   <link rel="icon" type="image/webp" href="imagens/logo.webp">
 
-  <!-- Google Ads Global Site Tag (gtag.js) -->
-  <!-- SUBSTITUA 'AW-XXXXXXXXX' PELO SEU ID DE CONVERSÃO DO GOOGLE ADS -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLHEYM15MX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXX');
+    gtag('config', 'G-SLHEYM15MX');
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,11 +126,11 @@
 
       var WHATSAPP_URL = 'https://wa.me/5594984336074?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Tayrine.';
 
-      // Dispara o evento de conversão do Google Ads
-      // SUBSTITUA 'AW-XXXXXXXXX/YYYYYYYYYY' PELA SUA LABEL DE CONVERSÃO
+      // Dispara o evento de conversão no GA4
       if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-XXXXXXXXX/YYYYYYYYYY',
+        gtag('event', 'whatsapp_click', {
+          'event_category': 'conversao',
+          'event_label': 'whatsapp_redirecionamento',
           'event_callback': function() {
             window.location.href = WHATSAPP_URL;
           }
