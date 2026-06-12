@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify && rm -rf public && mkdir -p public && cp -R index.html agendar.html whatsapp.html dist imagens public/",
     "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
   },
   "devDependencies": {
